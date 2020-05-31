@@ -15,7 +15,7 @@ let(:object) { return 500 }
 
   end
 
-  describe 100 do
+  describe 100 do #automatically declares subject is 100
     it { is_expected.to be > 90 }
     it { is_expected.to be >= 100 }
     it { is_expected.to be < 500 }
