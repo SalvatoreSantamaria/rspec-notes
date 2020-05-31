@@ -21,4 +21,17 @@ RSpec.describe 'equality matches' do
         end
     end
 
+    describe 'equal and the to be matcher (which are the same thing)' do
+        let(:c) {[1, 2, 3]}
+        let(:d) {[1, 2, 3]}
+        let(:e) { c }
+        
+        it 'tests for value, including the same type, and cares about object identity' do
+            expect(c).to equal(e)
+            expect(c).to be(e)
+            expect(c).not_to be(d)
+        end
+
+    end
+
 end
